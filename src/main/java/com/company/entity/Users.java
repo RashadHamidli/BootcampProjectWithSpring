@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @RequiredArgsConstructor
@@ -24,5 +25,10 @@ public class Users {
         this.name = name;
         this.surname = surname;
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return  String.format("Name: %s, Surname: %s, Email: %s", name, surname, email);
     }
 }

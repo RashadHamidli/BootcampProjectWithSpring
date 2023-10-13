@@ -15,8 +15,9 @@ public class UserController {
 
     @GetMapping("/{id}")
     public static String doGet(long id) {
-        userService.getUser(id);
-        return "Users get";
+        Users user = userService.getUser(id);
+        String st = user.toString();
+        return st;
     }
 
     @PostMapping("/add")
