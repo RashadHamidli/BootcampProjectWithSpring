@@ -1,6 +1,5 @@
 package com.company.service;
 
-import com.company.entity.Student;
 import com.company.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
