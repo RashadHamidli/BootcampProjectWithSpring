@@ -1,4 +1,4 @@
-package com.company;
+package com.company.entity;
 
 public class Teacher {
     private int id;

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.entity;
 
 public class User {
     private static Student s = new Student(1, "Rashad", "Hamidli");
