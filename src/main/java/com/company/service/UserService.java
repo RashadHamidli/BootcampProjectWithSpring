@@ -4,7 +4,9 @@ import com.company.entity.User;
 import com.company.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
 
     public User getUser(long id) {
