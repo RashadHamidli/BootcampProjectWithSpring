@@ -4,11 +4,11 @@ import com.company.entity.Users;
 import com.company.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-
 
     public Users getUser(long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -26,7 +26,6 @@ public class UserService {
         session.close();
         return "Users added";
     }
-
 
     public String deleteUser(long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
