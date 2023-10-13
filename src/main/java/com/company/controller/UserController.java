@@ -1,6 +1,7 @@
 package com.company.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,13 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
-
     @GetMapping("/{id}")
     protected String doGet() {
         return "Hello World doGet";
     }
-    @GetMapping("/add")
+    @PostMapping("/add")
     protected String doAdd() {
         return "Hello World doGet";
     }
@@ -22,7 +21,7 @@ public class UserController {
     protected String doDelete() {
         return "Hello World doGet";
     }
-    @GetMapping("/update")
+    @PostMapping("/update")
     protected String doUpdate() {
         return "Hello World doGet";
     }
