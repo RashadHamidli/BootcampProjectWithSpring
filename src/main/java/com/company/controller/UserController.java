@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/test")
-public class Test {
+public class UserController {
 
 
     @GetMapping("/1")
@@ -19,4 +19,5 @@ public class Test {
     protected String doReq() {
         return "Hello World doReq bbb";
     }
+
 }

@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.controller.Test;
+import com.company.controller.UserController;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +12,7 @@ public class Louncher extends SpringBootServletInitializer implements CommandLin
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(Test.class);
+        return builder.sources(UserController.class);
     }
 
     public static void main(String[] args) {

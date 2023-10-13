@@ -1,20 +1,23 @@
 package com.company.entity;
 
 import com.company.util.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
+@Entity
+@RequiredArgsConstructor
+@Getter
+@Setter
 public class User {
-
-    public static void main(String[] args) {
-        Student student=new Student();
-        student.setName("Farhad");
-        student.setSurname("Valizade");
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(student);
-        transaction.commit();
-        session.close();
-    }
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String name;
+    private String surname;
+    private String email;
 }
