@@ -16,8 +16,8 @@ public class Main {
 //        String s = UserController.doUpdate(2, user);
 //        System.out.println(s);
 
-        String s = UserController.doDelete(3);
-        System.out.println(s);
+//        String s = UserController.doDelete(3);
+//        System.out.println(s);
 
 
     }
