@@ -1,6 +1,6 @@
 package com.company.controller;
 
-import com.company.entity.User;
+import com.company.entity.Users;
 import com.company.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,32 +11,30 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    private final UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
+    private static final UserService userService = new UserService();
 
     @GetMapping("/{id}")
-    protected String doGet() {
-        return "User get";
+    public static String doGet(long id) {
+        userService.getUser(id);
+        return "Users get";
     }
 
     @PostMapping("/add")
-    protected String doAdd() {
-        User user=new User("Rashad", "Hamidli", "mr_rashad@email.com");
-        userService.addUser(user);
-        return "User added";
+    public static String doAdd(Users users) {
+        userService.addUser(users);
+        return "Users added";
     }
 
     @GetMapping("/delete/{id}")
-    protected String doDelete() {
-        return "User deleted";
+    public static String doDelete(int id) {
+        userService.deleteUser(id);
+        return "Users deleted";
     }
 
     @PostMapping("/update/{id}")
-    protected String doUpdate() {
-        return "User updated";
+    public static String doUpdate(int id, Users users) {
+        userService.updateUser(id, users);
+        return "Users updated";
     }
 
 }

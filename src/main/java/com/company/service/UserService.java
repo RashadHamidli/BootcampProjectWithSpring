@@ -1,6 +1,6 @@
 package com.company.service;
 
-import com.company.entity.User;
+import com.company.entity.Users;
 import com.company.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -9,41 +9,41 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    public User getUser(long id) {
+    public Users getUser(long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        User st = session.get(User.class, id);
+        Users st = session.get(Users.class, id);
         session.close();
         return st;
     }
 
-    public String addUser(User user) {
+    public String addUser(Users users) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        session.save(user);
+        session.save(users);
         transaction.commit();
         session.close();
-        return "User added";
+        return "Users added";
     }
 
 
     public String deleteUser(long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        User st = session.get(User.class, id);
+        Users st = session.get(Users.class, id);
         session.delete(st);
         transaction.commit();
         session.close();
-        return "User deleted";
+        return "Users deleted";
     }
 
-    public String updateUser(long id, User user) {
+    public String updateUser(long id, Users users) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        User st = session.get(User.class, id);
-        session.update(user);
+        Users st = session.get(Users.class, id);
+        session.update(users);
         transaction.commit();
         session.close();
-        return "User updated";
+        return "Users updated";
     }
 }

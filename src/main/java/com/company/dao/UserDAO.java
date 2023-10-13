@@ -1,15 +1,15 @@
 package com.company.dao;
 
-import com.company.entity.User;
+import com.company.entity.Users;
 
 public class UserDAO implements DAO{
     @Override
-    public User getUser(long id) {
+    public Users getUser(long id) {
         return null;
     }
 
     @Override
-    public String addUser(User user) {
+    public String addUser(Users users) {
         return null;
     }
 
@@ -19,7 +19,7 @@ public class UserDAO implements DAO{
     }
 
     @Override
-    public String updateUser(long id, User user) {
+    public String updateUser(long id, Users users) {
         return null;
     }
 }

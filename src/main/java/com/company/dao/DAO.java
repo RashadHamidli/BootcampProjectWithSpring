@@ -1,10 +1,10 @@
 package com.company.dao;
 
-import com.company.entity.User;
+import com.company.entity.Users;
 
 public interface DAO {
-    public User getUser(long id);
-    public String addUser(User user);
+    public Users getUser(long id);
+    public String addUser(Users users);
     public String deleteUser(long id);
-    public String updateUser(long id,User user);
+    public String updateUser(long id, Users users);
 }

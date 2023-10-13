@@ -1,6 +1,5 @@
 package com.company.entity;
 
-import com.company.util.HibernateUtil;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,7 +12,7 @@ import lombok.Setter;
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class User {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -21,7 +20,7 @@ public class User {
     private String surname;
     private String email;
 
-    public User(String name, String surname, String email) {
+    public Users(String name, String surname, String email) {
         this.name = name;
         this.surname = surname;
         this.email = email;
