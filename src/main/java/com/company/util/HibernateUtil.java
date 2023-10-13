@@ -11,7 +11,7 @@ public class HibernateUtil {
         try {
             return new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         } catch (Throwable ex) {
-            System.err.println("SessionFactory oluşturulamadı: " + ex);
+            System.err.println("SessionFactory yaradilmadi: " + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }

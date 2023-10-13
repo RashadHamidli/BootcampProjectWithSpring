@@ -6,18 +6,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/user")
 public class UserController {
 
 
-    @GetMapping("/1")
+    @GetMapping("/{id}")
     protected String doGet() {
         return "Hello World doGet";
     }
-
-    @RequestMapping("/2")
-    protected String doReq() {
-        return "Hello World doReq bbb";
+    @GetMapping("/add")
+    protected String doAdd() {
+        return "Hello World doGet";
+    }
+    @GetMapping("/delete")
+    protected String doDelete() {
+        return "Hello World doGet";
+    }
+    @GetMapping("/update")
+    protected String doUpdate() {
+        return "Hello World doGet";
     }
 
 }

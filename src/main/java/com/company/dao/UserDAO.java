@@ -4,8 +4,8 @@ import com.company.entity.User;
 
 public class UserDAO implements DAO{
     @Override
-    public void getUser() {
-
+    public User getUser(long id) {
+        return null;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class UserDAO implements DAO{
     }
 
     @Override
-    public String updateUser(long id) {
+    public String updateUser(long id, User user) {
         return null;
     }
 }
