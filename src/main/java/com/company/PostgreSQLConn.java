@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class App {
+public class PostgreSQLConn {
     public static void main(String[] args) {
 
         String url = "jdbc:postgresql://localhost:5432/user_register";
@@ -15,12 +15,12 @@ public class App {
         try (Connection connection = DriverManager.getConnection(url, user, pass);
              Statement statement = connection.createStatement()) {
             String sqlSorgusu = """
-                      CREATE TABLE kisiler (
-                      kisi_sira INT GENERATED ALWAYS AS IDENTITY,
-                      kisi_adi VARCHAR(20) NOT NULL,
-                      kisi_soyadi VARCHAR(30) NOT NULL DEFAULT 'SEZER',
-                      kisi_eposta VARCHAR(50) NOT NULL,
-                      CONSTRAINT PK_sira PRIMARY KEY(kisi_sira)
+                      CREATE TABLE student (
+                      student_id INT GENERATED ALWAYS AS IDENTITY,
+                      student_name VARCHAR(20) NOT NULL,
+                      student_surname VARCHAR(30) NOT NULL DEFAULT 'SEZER',
+                      student_email VARCHAR(50) NOT NULL,
+                      CONSTRAINT PK_id PRIMARY KEY(student_id)
                     );
                     """;
             statement.executeUpdate(sqlSorgusu);
