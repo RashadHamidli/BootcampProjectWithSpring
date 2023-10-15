@@ -10,11 +10,16 @@ public class PostgresSelectTable {
              Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery("select * from student");
             while (resultSet.next()) {
-                String name = resultSet.getString("student_name");
-                String surname = resultSet.getString("student_surname");
-                String email = resultSet.getString("student_email");
-
-                String format = String.format("%s, %s, %s", name, surname, email);
+//                String name = resultSet.getString("student_name");
+//                String surname = resultSet.getString("student_surname");
+//                String email = resultSet.getString("student_email");
+//
+//                String format = String.format("%s, %s, %s", name, surname, email);
+//                System.out.println(format);
+                String frst = resultSet.getString(2);
+                String sec = resultSet.getString(3);
+                String th = resultSet.getString(4);
+                String format = String.format("%s, %s, %s", frst, sec, th);
                 System.out.println(format);
             }
         } catch (SQLException e) {
