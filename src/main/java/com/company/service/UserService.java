@@ -2,9 +2,9 @@ package com.company.service;
 
 import com.company.entity.Users;
 import com.company.util.HibernateUtil;
+import jakarta.transaction.Transactional;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 import org.springframework.stereotype.Service;
 
 @Service
