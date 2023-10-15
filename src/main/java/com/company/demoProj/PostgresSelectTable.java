@@ -9,6 +9,8 @@ public class PostgresSelectTable {
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/user_register", "postgres", "admin");
              Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery("select * from student");
+            String columnCount = resultSet.getMetaData().getColumnClassName(2);
+            System.out.println(columnCount);
             while (resultSet.next()) {
 //                String name = resultSet.getString("student_name");
 //                String surname = resultSet.getString("student_surname");
