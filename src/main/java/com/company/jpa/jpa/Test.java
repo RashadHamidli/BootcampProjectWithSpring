@@ -1,5 +1,6 @@
 package com.company.jpa.jpa;
 
+import com.company.spring.entity.Student;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -13,11 +14,20 @@ public class Test {
         for (Object findAll : em.createNamedQuery("findAll").getResultList()) {
             System.out.println(findAll);
         }
+        System.out.println("------------------------");
 
         Query query = em.createQuery("SELECT p FROM Student p WHERE p.name = :name");
         query.setParameter("name", "Rashad");
         List results = query.getResultList();
         results.forEach(System.out::println);
+
+        TypedQuery<Student> query1 = em.createQuery("SELECT p FROM Student p WHERE p.name = :name", Student.class);
+        TypedQuery<Student> s = query1.setParameter("name", "Rashad");
+        List<Student> results1 = s.getResultList();
+
+        results1.forEach((person) -> {
+            System.out.println(person.getName());
+        });
 
         System.out.println("------------------------");
 
