@@ -12,6 +12,10 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@NamedQuery(
+        name = "findAll",
+        query = "SELECT s FROM Student s"
+)
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

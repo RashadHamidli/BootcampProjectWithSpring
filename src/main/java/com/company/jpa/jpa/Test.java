@@ -1,20 +1,25 @@
 package com.company.jpa.jpa;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-import jakarta.persistence.Query;
+import jakarta.persistence.*;
 
 public class Test {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("rashadPU");
         EntityManager em = emf.createEntityManager();
-//        Query nativeQuery = em.createNativeQuery("SELECT count(s.student_id) FROM student s");
-//        System.out.println("student sayi: " + nativeQuery.getSingleResult());
-        Query nativeQuery = em.createNativeQuery("SELECT s.student_name FROM student s");
-        for (Object o : nativeQuery.getResultList()) {
-            System.out.println(o);
+        EntityTransaction et = em.getTransaction();
+        et.begin();
+        for (Object findAll : em.createNamedQuery("findAll").getResultList()) {
+            System.out.println(findAll);
         }
+
+
+//        Query nativeQuery = em.createNativeQuery("SELECT s.student_name FROM student s");
+//        if(!et.isActive()){
+//            et.rollback();
+//            return;
+//        }
+//        System.out.println("student names: " + nativeQuery.getResultList());
+        et.commit();
         emf.close();
         em.close();
 

@@ -9,7 +9,7 @@
 <!--        <mapping-file>META-INF/persistence.xml</mapping-file>-->
 <!--        <jar-file>extEntity.jar</jar-file>-->
         <class>com.company.jpa.jpa.Main</class>
-        <class>com.company.jpa.jpa.Test</class>
+        <class>com.company.spring.entity.Student</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
