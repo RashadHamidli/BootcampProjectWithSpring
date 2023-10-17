@@ -7,7 +7,7 @@
         <description>JPA settings</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 <!--        <mapping-file>META-INF/persistence.xml</mapping-file>-->
-        <jar-file>extEntity.jar</jar-file>
+<!--        <jar-file>extEntity.jar</jar-file>-->
         <class>com.company.jpa.jpa.Main</class>
         <class>com.company.jpa.jpa.Test</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
