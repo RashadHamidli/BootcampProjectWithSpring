@@ -1,4 +1,4 @@
-package com.company.demoProj;
+package com.company.app.jdbc;
 
 import org.apache.coyote.http11.Constants;
 
