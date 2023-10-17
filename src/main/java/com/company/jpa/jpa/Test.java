@@ -2,6 +2,8 @@ package com.company.jpa.jpa;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 public class Test {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("rashadPU");
@@ -12,13 +14,17 @@ public class Test {
             System.out.println(findAll);
         }
 
+        Query query = em.createQuery("SELECT p FROM Student p WHERE p.name = :name");
+        query.setParameter("name", "Rashad");
+        List results = query.getResultList();
+        results.forEach(System.out::println);
 
-//        Query nativeQuery = em.createNativeQuery("SELECT s.student_name FROM student s");
-//        if(!et.isActive()){
-//            et.rollback();
-//            return;
-//        }
-//        System.out.println("student names: " + nativeQuery.getResultList());
+        System.out.println("------------------------");
+
+        Query nativeQuery = em.createNativeQuery("SELECT s.* FROM Student s");
+        List list = nativeQuery.getResultList();
+        list.forEach(System.out::println);
+
         et.commit();
         emf.close();
         em.close();

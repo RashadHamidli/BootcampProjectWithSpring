@@ -27,10 +27,14 @@ public class Student {
     private String surname;
     @Column(name = "student_email")
     private String email;
+    @Column(name="student_password")
+    @Transient
+    private String password;
 
-    public Student(String name, String surname, String email) {
+    public Student(String name, String surname, String email, String password) {
         this.name = name;
         this.surname = surname;
         this.email = email;
+        this.password=password;
     }
 }
