@@ -1,11 +1,7 @@
-package com.company.app.jdbc;
-
-import org.apache.coyote.http11.Constants;
+package com.company.jpa.jdbc;
 
 import java.sql.*;
 import java.util.Scanner;
-
-import static org.apache.coyote.http11.Constants.a;
 
 public class PostgresInsertTable {
     public static void main(String[] args) {

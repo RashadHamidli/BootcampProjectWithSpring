@@ -1,6 +1,4 @@
-package com.company.app.jdbc;
-
-import com.company.entity.Student;
+package com.company.jpa.jdbc;
 
 import java.sql.*;
 

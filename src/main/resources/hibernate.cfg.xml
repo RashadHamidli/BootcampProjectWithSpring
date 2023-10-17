@@ -11,6 +11,6 @@
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
         <!-- Entity Sınıflarının Paket Ayarı -->
-        <mapping class="com.company.entity.Users"/>
+        <mapping class="com.company.spring.entity.Users"/>
     </session-factory>
 </hibernate-configuration>

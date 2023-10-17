@@ -1,8 +1,7 @@
-package com.company.service;
+package com.company.spring.service;
 
-import com.company.entity.Users;
-import com.company.util.HibernateUtil;
-import jakarta.transaction.Transactional;
+import com.company.spring.entity.Users;
+import com.company.spring.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Service;

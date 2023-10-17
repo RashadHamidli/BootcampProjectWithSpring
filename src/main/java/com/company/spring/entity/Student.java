@@ -1,4 +1,4 @@
-package com.company.entity;
+package com.company.spring.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

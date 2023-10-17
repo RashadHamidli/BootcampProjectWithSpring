@@ -1,6 +1,6 @@
-package com.company.dao;
+package com.company.spring.dao;
 
-import com.company.entity.Users;
+import com.company.spring.entity.Users;
 
 public class UserDAO implements DAO{
     @Override

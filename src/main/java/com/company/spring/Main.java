@@ -1,7 +1,4 @@
-package com.company;
-
-import com.company.controller.UserController;
-import com.company.entity.Users;
+package com.company.spring;
 
 public class Main {
     public static void main(String[] args) {

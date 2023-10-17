@@ -1,7 +1,7 @@
-package com.company.controller;
+package com.company.spring.controller;
 
-import com.company.entity.Users;
-import com.company.service.UserService;
+import com.company.spring.entity.Users;
+import com.company.spring.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

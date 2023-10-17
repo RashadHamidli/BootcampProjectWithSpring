@@ -1,6 +1,5 @@
-package com.company.app.jdbc;
+package com.company.jpa.jdbc;
 
-import java.io.PrintWriter;
 import java.sql.*;
 
 public class PostgresUpdateTable {
