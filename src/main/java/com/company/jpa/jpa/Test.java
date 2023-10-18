@@ -22,11 +22,11 @@ public class Test {
         results.forEach(System.out::println);
 
         TypedQuery<Student> query1 = em.createQuery("SELECT p FROM Student p WHERE p.name = :name", Student.class);
-        TypedQuery<Student> s = query1.setParameter("name", "Rashad");
-        List<Student> results1 = s.getResultList();
+        query1.setParameter("name", "Rashad");
+        List<Student> results1 = query1.getResultList();
 
         results1.forEach((person) -> {
-            System.out.println(person.getName());
+            System.out.println(person.getSurname());
         });
 
         System.out.println("------------------------");
