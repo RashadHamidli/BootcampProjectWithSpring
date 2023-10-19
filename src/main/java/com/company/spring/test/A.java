@@ -2,10 +2,15 @@ package com.company.spring.test;
 
 public class A {
     private B b;
-    public A(){
-        b=new B();
+    private C c;
+
+    public A() {
+        b = new B();
+        c = new C();
     }
-    public void run(){
+
+    public void run() {
         b.print();
+        c.print();
     }
 }
