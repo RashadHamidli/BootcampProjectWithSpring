@@ -1,16 +1,13 @@
 package com.company.spring.test;
 
 public class A {
-    private B b;
-    private C c;
+    private final B b;
 
-    public A() {
-        b = new B();
-        c = new C();
+    public A(B b) {
+        this.b = b;
     }
 
     public void run() {
         b.print();
-        c.print();
     }
 }
