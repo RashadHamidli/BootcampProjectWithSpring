@@ -6,9 +6,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Config {
     @Bean
-    public Message message() {
-        Message message = new Message();
-        message.setMessage("Hello world");
-        return message;
+    public IMessage messageA() {
+        return new AMessage();
+    }
+    @Bean
+    public IMessage messageB() {
+        return new BMessage();
     }
 }

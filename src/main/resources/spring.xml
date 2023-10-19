@@ -4,16 +4,11 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    <bean id="message" class="com.company.spring.example.Message" scope="singleton">
+    <bean id="message" class="com.company.spring.example.IMessage" scope="singleton">
         <property name="message" value="Spring"/>
     </bean>
-    <bean id="message1" class="com.company.spring.example.Message" scope="prototype">
+    <bean id="message1" class="com.company.spring.example.IMessage" scope="prototype">
         <property name="message" value="Spring1"/>
     </bean>
 
-    <bean id="user" class="com.company.spring.example.User">
-    </bean>
-
-    <bean id="teacher" class="com.company.spring.example.Teacher">
-    </bean>
 </beans>
