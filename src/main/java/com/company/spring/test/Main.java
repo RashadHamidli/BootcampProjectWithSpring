@@ -2,8 +2,9 @@ package com.company.spring.test;
 
 public class Main {
     public static void main(String[] args) {
-        B b = new B();
-        A a = new A(b);
+        IRun rb = new B();
+        IRun rc = new C();
+        A a = new A(rc);
         a.run();
     }
 }

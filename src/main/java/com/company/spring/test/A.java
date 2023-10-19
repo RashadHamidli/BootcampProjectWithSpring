@@ -1,13 +1,13 @@
 package com.company.spring.test;
 
 public class A {
-    private final B b;
+    private final IRun iRun;
 
-    public A(B b) {
-        this.b = b;
+    public A(IRun iRun) {
+        this.iRun = iRun;
     }
 
     public void run() {
-        b.print();
+        iRun.print();
     }
 }
