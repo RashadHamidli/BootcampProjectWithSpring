@@ -6,11 +6,6 @@
     <persistence-unit name="rashadPU" transaction-type="RESOURCE_LOCAL">
         <description>JPA settings</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-<!--        <mapping-file>META-INF/persistence.xml</mapping-file>-->
-<!--        <jar-file>extEntity.jar</jar-file>-->
-        <class>com.company.jpa.jpa.Main</class>
-        <class>com.company.spring.example.IMessage</class>
-        <class>com.company.spring.example.Config</class>
         <class>com.company.spring.example.BMessage</class>
         <class>com.company.spring.example.AMessage</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
