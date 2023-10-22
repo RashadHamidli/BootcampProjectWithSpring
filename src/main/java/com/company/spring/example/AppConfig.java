@@ -1,20 +1,26 @@
 package com.company.spring.example;
 
+
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+
+import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = "com.company.spring.example")
 public class AppConfig {
-//    @Bean
-//    public IMessage messageA() {
-//        return new AMessage();
-//    }
-//    @Bean
-//    public IMessage messageB() {
-//        return new BMessage();
-//    }
-    // Bu sinifdə Spring komponentlərinin konfiqurasiyası təyin edilir
-    // @ComponentScan ildə müəyyənləşdirilmiş bazaya uyğun komponentləri axtarır
+
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
+        LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+        entityManagerFactory.setDataSource(dataSource);
+        entityManagerFactory.setPackagesToScan("com.company.spring.example"); // Entity siniflarinizin paketi
+        JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
+        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
+        return entityManagerFactory;
+    }
+
+    // Əlavə konfiqurasiya əmrləri, DataSource və digər parametrlər burada əlavə oluna bilər
 }
