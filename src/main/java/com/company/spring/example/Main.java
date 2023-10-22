@@ -10,8 +10,6 @@ public class Main {
         ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         IMessage aMessage = context.getBean("messageA", IMessage.class);
         aMessage.print();
-        IMessage bMessage = context.getBean("messageB", IMessage.class);
-        bMessage.print();
 
     }
 }
