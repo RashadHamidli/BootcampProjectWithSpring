@@ -2,10 +2,12 @@ package com.company;
 
 
 import com.company.spring.example.AppConfig;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-
+@EnableAutoConfiguration
 public class Main {
     public static void main(String[] args) {
 
